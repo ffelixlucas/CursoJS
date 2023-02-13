@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivendo em um pais</title>
+    <style>
+        h1{
+         font-size: 12pt Arial;
+         color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em que país voce vive?</h1>
+    <input type="text" name="country" id="pais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="acao"></div>
+    <script>
+        function verificar(){
+        var p = window.document.querySelector('input#pais')
+        var res = window.document.querySelector('div#acao')
+              res.innerHTML = (`<p>Voce mora no <strong>${p.value[0].toUpperCase() + p.value.substring(1)}! </strong></p>`)
+        //if (p.value == 'Brasil' ||  p.value  == 'brasil') {
+            if (p.value[0].toUpperCase() + p.value.substring(1) == 'Brasil'){ //Transformando a primeira letra em maiuscula para validação de país
+            res.innerHTML += `Voce é Brasileiro!`
+        
+        }else {
+              res.innerHTML +=`Voce é Estrangeiro`
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
