@@ -16,11 +16,14 @@
     <h1>Em que país voce vive?</h1>
     <input type="text" name="country" id="pais">
     <input type="button" value="verificar" onclick="verificar()">
-    <div id="acao"></div>
+    <div id="action"></div>
+    
+    
+
     <script>
         function verificar(){
         var p = window.document.querySelector('input#pais')
-        var res = window.document.querySelector('div#acao')
+        var res = window.document.querySelector('div#action')
               res.innerHTML = (`<p>Voce mora no <strong>${p.value[0].toUpperCase() + p.value.substring(1)}! </strong></p>`)
         //if (p.value == 'Brasil' ||  p.value  == 'brasil') {
             if (p.value[0].toUpperCase() + p.value.substring(1) == 'Brasil'){ //Transformando a primeira letra em maiuscula para validação de país
@@ -30,8 +33,9 @@
               res.innerHTML +=`Voce é Estrangeiro`
             }
         }
-
+   
     </script>
+    
     
 </body>
 </html>
