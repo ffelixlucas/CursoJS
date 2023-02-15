@@ -6,7 +6,7 @@ function carregar ()
     var corpo = window.document.getElementById('corpo')
     var data = new Date ()
     var horario = data.getHours ()
-   // var horario = 
+   //var horario = 
     msg.innerHTML = `São ${horario} horas` //TEM QUE SER = 
 
     if (horario <= 12 && horario >=3){ 
