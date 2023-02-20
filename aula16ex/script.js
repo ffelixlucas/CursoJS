@@ -35,6 +35,14 @@ function adicionar(){
     window.alert('Valor invalido ou ja encontrado na lista!')
     }
 }
+function maiorValor{
+    let max = valores[0]
+    for (let c = 1; c < valores.length; c++)
+    if (valores[c] > max) {
+        max = valores[c]
+    }
+}
 function finalizar(){
     res.innerHTML = `Ao todo, temos ${valores.length} numeros cadastrados`
+    res.innerHTML = `Maior valor informado foi o ${max}`
 }
